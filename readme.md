@@ -1,8 +1,8 @@
 # Bruno Mock Server Examples
 
-A sample Bruno workspace for learning and experimenting with **Mock Servers in Bruno**.
+A sample Bruno collection for learning and experimenting with **Mock Servers in Bruno**.
 
-This workspace includes examples for creating mock servers from:
+This collection includes examples for creating mock servers from:
 
 - Bruno collections and saved response examples
 - OpenAPI specifications
@@ -21,11 +21,11 @@ Clone this repository:
 git clone https://github.com/bruno-collections/mock-examples.git
 ```
 
-Open Bruno and import the repository as a **Workspace**.
+Open Bruno and import the repository as a **collection**.
 
-> **Important:** This repository is a Bruno Workspace. You can directly import it into Bruno as workspace by providing GitHub URL in import modal.
+> **Important:** Import this collection in Bruno directly by providing the GitHub URL in the import modal.
 
-Once imported, you'll find sample collections, API specifications, and mock server configurations ready to explore.
+Once imported, you'll find sample collections, API specifications, and response examples ready to explore.
 
 ## What's Included
 

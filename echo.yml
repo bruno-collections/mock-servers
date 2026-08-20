@@ -1,0 +1,106 @@
+info:
+  name: echo
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://echo.usebruno.com
+  headers:
+    - name: x-api-key
+      value: secret123
+      description: api-secret
+  body:
+    type: json
+    data: |
+      {
+        "authenticated": true,
+        "message": "Valid API key"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: echo-example
+    description: Echo endpoint with sample json body
+    request:
+      url: https://echo.usebruno.com
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "title":"usebruno",
+            "msg":"The most loving API client for Developers"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: "{}"
+  - name: admin
+    description: Admin with all permissions
+    request:
+      url: https://echo.usebruno.com
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "id": 101,
+            "type": "admin",
+            "permissions": ["read", "write"]
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: "{}"
+  - name: user
+    request:
+      url: https://echo.usebruno.com
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "id": 102,
+            "type": "guest",
+            "permissions": ["read"]
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: "{}"
+  - name: api-key-auth-header
+    description: API key with valid header credentials
+    request:
+      url: https://echo.usebruno.com
+      method: POST
+      headers:
+        - name: x-api-key
+          value: secret123
+          description: api-secret
+      body:
+        type: json
+        data: |
+          {
+            "authenticated": true,
+            "message": "Valid API key"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: "{}"

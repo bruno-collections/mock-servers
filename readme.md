@@ -1,6 +1,6 @@
 # Bruno Mock Server Examples
 
-A sample Bruno collection for learning and experimenting with **Mock Servers in Bruno**.
+A sample Bruno collection for learning and experimenting with **[Mock Servers in Bruno](https://docs.usebruno.com/mock-servers/overview)**.
 
 This collection includes examples for creating mock servers from:
 
@@ -163,7 +163,7 @@ Return Status + Headers + Body
 
 ## Learn More
 
-- [Bruno Documentation](https://docs.usebruno.com/)
+- [Bruno Documentation](https://docs.usebruno.com/mock-servers/overview)
 - [Bruno GitHub](https://github.com/usebruno/bruno)
 - [Bruno Public Collections](https://github.com/bruno-collections)
 
